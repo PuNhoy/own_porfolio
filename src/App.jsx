@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSun, faMoon, faEnvelope, faBriefcase, faArrowDown, faLink, faCode, faRocket, faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
+import myImage from '/src/assets/images/my_profile.jpg';
+
 
 
 function App() {
@@ -136,7 +138,7 @@ function App() {
         <div className="hero-content">
           <div className="profile-image">
             <img
-              src="src/assets/images/my_profile.jpg"
+              src={myImage}
               alt="Profile"
             />
           </div>
@@ -157,10 +159,14 @@ function App() {
             >
               View My Work
             </button>
-            <button className="btn btn-secondary">
-              <FontAwesomeIcon icon={faBriefcase} className="mr-2" /> Download CV
-
-            </button>
+            <a
+              href="/src/cv.jsx"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-secondary"
+            >
+              <FontAwesomeIcon icon={faBriefcase} className="mr-2" /> View CV
+            </a>
           </div>
         </div>
         <div className="scroll-indicator">
